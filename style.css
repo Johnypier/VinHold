@@ -1047,30 +1047,47 @@ a {
 /* ==========================================================================
    Thank You Page Styles
    ========================================================================== */
+/* 1. Ensure body fills at least 100% of viewport height */
+body.page-thank-you {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 2. Main content expands to push footer to the absolute bottom */
 .thank-you-main {
-  min-height: 85vh;
+  flex: 1 0 auto;
   display: flex;
   align-items: center;
-  padding-top: 5rem;
+  justify-content: center;
+  padding: 7rem 0 4rem; /* top padding accounts for fixed header */
+  width: 100%;
 }
 
 .section-thank-you {
   width: 100%;
+  padding: 0;
 }
 
+/* 3. Card layout strictly centered */
 .thank-you-card {
-  max-width: 720px;
+  max-width: 760px;
+  width: 100%;
   margin: 0 auto;
-  text-align: center;
-  padding: 4rem 3rem;
+  padding: 3.8rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Centers all elements horizontally */
+  text-align: center;        /* Centers all text inside */
   border: 1px solid var(--border-glow);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.12);
 }
 
+/* Centered Icon */
 .thank-you-icon-wrapper {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.8rem;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 1.5rem;
   border-radius: 50%;
   background: rgba(212, 175, 55, 0.1);
   border: 2px solid var(--gold-primary);
@@ -1078,29 +1095,43 @@ a {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+  flex-shrink: 0;
 }
 
 .thank-you-check {
   stroke: var(--gold-light);
 }
 
+.thank-you-card .section-tag {
+  margin-bottom: 0.8rem;
+}
+
 .thank-you-card .section-title {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  margin-top: 0.5rem;
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  line-height: 1.25;
+  margin: 0.2rem auto 0;
+  text-align: center;
+  width: 100%;
+}
+
+.thank-you-card .title-divider {
+  margin: 1.2rem auto 1.5rem;
 }
 
 .thank-you-message {
   font-size: 1.1rem;
   line-height: 1.8;
-  max-width: 580px;
-  margin: 1.8rem auto 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 1rem;
+  text-align: center;
   color: var(--text-main);
 }
 
 .thank-you-redirect {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-dim);
-  margin-bottom: 2.5rem;
+  margin: 0 auto 2.2rem;
+  text-align: center;
 }
 
 .thank-you-redirect span {
@@ -1108,19 +1139,36 @@ a {
   font-weight: 600;
 }
 
+/* Centered Button Row */
 .thank-you-actions {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.2rem;
   flex-wrap: wrap;
+  width: 100%;
+}
+
+/* 4. Footer stays firmly at the bottom */
+body.page-thank-you .site-footer {
+  margin-top: auto;
+  width: 100%;
 }
 
 @media (max-width: 600px) {
   .thank-you-card {
-    padding: 3rem 1.5rem;
+    padding: 2.8rem 1.5rem;
+  }
+  
+  .thank-you-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .thank-you-actions .btn {
+    width: 100%;
   }
 }
-
 /* ==========================================================================
    Progressive Scroll Reveal
    ========================================================================== */
