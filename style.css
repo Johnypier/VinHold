@@ -1045,6 +1045,83 @@ a {
 }
 
 /* ==========================================================================
+   Thank You Page Styles
+   ========================================================================== */
+.thank-you-main {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.section-thank-you {
+  width: 100%;
+}
+
+.thank-you-card {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4rem 3rem;
+  border: 1px solid var(--border-glow);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.12);
+}
+
+.thank-you-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.8rem;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.1);
+  border: 2px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+}
+
+.thank-you-check {
+  stroke: var(--gold-light);
+}
+
+.thank-you-card .section-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-top: 0.5rem;
+}
+
+.thank-you-message {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 580px;
+  margin: 1.8rem auto 1.2rem;
+  color: var(--text-main);
+}
+
+.thank-you-redirect {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin-bottom: 2.5rem;
+}
+
+.thank-you-redirect span {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.thank-you-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .thank-you-card {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* ==========================================================================
    Progressive Scroll Reveal
    ========================================================================== */
 .reveal {

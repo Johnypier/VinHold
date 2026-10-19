@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Спасибо за обращение | Холдинг VINIMPEX</title>
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-thank-you">
+
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Vinimpex Главная">
+        <span class="logo-small">HOLDING</span>
+        <span class="logo-main">VINIMPEX</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html#about" class="nav-link">О холдинге</a></li>
+          <li><a href="index.html#geography" class="nav-link">География</a></li>
+          <li><a href="index.html#structure" class="nav-link">Предприятия</a></li>
+          <li><a href="index.html#reserves" class="nav-link">Мощности и флот</a></li>
+          <li><a href="index.html#standards" class="nav-link">Качество</a></li>
+          <li><a href="contacts.html" class="nav-link nav-btn">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="thank-you-main">
+    <section class="section section-thank-you">
+      <div class="container">
+        <div class="thank-you-card glass-card">
+          <!-- Animated Gold Check Icon -->
+          <div class="thank-you-icon-wrapper" aria-hidden="true">
+            <svg class="thank-you-check" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+
+          <span class="section-tag">Обращение получено</span>
+          <h1 class="section-title">Благодарим за интерес к Холдингу VINIMPEX!</h1>
+          <div class="title-divider"></div>
+
+          <p class="thank-you-message">
+            Ваше сообщение успешно отправлено. Специалисты коммерческого департамента свяжутся с вами в ближайшее время по указанным контактам.
+          </p>
+
+          <p class="thank-you-redirect">
+            Автоматический возврат на главную страницу через <span id="countdown">10</span> сек.
+          </p>
+
+          <div class="thank-you-actions">
+            <a href="index.html" class="btn btn-primary">На главную страницу</a>
+            <a href="contacts.html" class="btn btn-outline">К контактам</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="logo-small">HOLDING</span>
+        <span class="logo-main">VINIMPEX</span>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Главная</a>
+        <a href="index.html#structure">Предприятия</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div class="footer-copy">
+        <p>Все права защищены Холдингом «VINIMPEX».</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // 10-second auto-redirect back to index.html
+    let secondsLeft = 10;
+    const countdownEl = document.getElementById('countdown');
+
+    const timer = setInterval(() => {
+      secondsLeft -= 1;
+      if (countdownEl) countdownEl.textContent = secondsLeft;
+
+      if (secondsLeft <= 0) {
+        clearInterval(timer);
+        window.location.href = 'index.html';
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
