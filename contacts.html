@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты | Холдинг Vinimpex</title>
+  <meta name="description" content="Контактная информация холдинга Vinimpex. Адрес головного представительства в г. Твардица, телефон, факс и электронная почта.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-contacts">
+
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Vinimpex Главная">
+        <span class="logo-small">HOLDING</span>
+        <span class="logo-main">VINIMPEX</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html#about" class="nav-link">О холдинге</a></li>
+          <li><a href="index.html#geography" class="nav-link">География</a></li>
+          <li><a href="index.html#structure" class="nav-link">Предприятия</a></li>
+          <li><a href="index.html#reserves" class="nav-link">Мощности и флот</a></li>
+          <li><a href="index.html#standards" class="nav-link">Качество</a></li>
+          <li><a href="contacts.html" class="nav-link nav-btn active">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contacts-main">
+    <section class="section section-contacts-hero">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Прямая связь</span>
+          <h1 class="section-title">Контакты холдинга</h1>
+          <p class="section-lead">Для получения дополнительной информации и возможного приобретения продукции предприятий холдинга, обращайтесь по официальным реквизитам:</p>
+          <div class="title-divider"></div>
+        </div>
+
+        <div class="grid-2-col contacts-grid">
+          <!-- Requisites Card -->
+          <div class="contact-card glass-card reveal">
+            <span class="company-country">Головной офис</span>
+            <h3>Holding "Vinimpex"</h3>
+            <p class="contact-desc">Центральное представительство холдинга в Республике Молдова.</p>
+
+            <div class="contact-items-list">
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <span class="contact-label">Почтовый адрес</span>
+                  <p class="contact-value">MD 7422, Мун. Тараклия, г. Твардица<br>Республика Молдова</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <span class="contact-label">Телефон / Факс</span>
+                  <a href="tel:+37329163186" class="contact-link">(+373 291) 63186</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <span class="contact-label">Электронная почта</span>
+                  <a href="mailto:holding.vinimpex@gmail.com" class="contact-link">holding.vinimpex@gmail.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card glass-card reveal">
+            <h3>Коммерческий запрос</h3>
+            <p>Отправьте прямое обращение для оперативной связи со специалистами холдинга.</p>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Спасибо! Ваше обращение принято.');">
+              <div class="form-group">
+                <label for="company">Организация</label>
+                <input type="text" id="company" name="company" placeholder="ООО / Торговая сеть / Дистрибьютор" required>
+              </div>
+
+              <div class="form-group">
+                <label for="name">Контактное лицо</label>
+                <input type="text" id="name" name="name" placeholder="Имя и Фамилия" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Телефон</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+___ ___ ___" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" placeholder="mail@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Интересующая продукция / Объёмы</label>
+                <textarea id="message" name="message" rows="4" placeholder="Укажите категории продукции, направления поставок..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Отправить обращение</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="logo-small">HOLDING</span>
+        <span class="logo-main">VINIMPEX</span>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Главная</a>
+        <a href="index.html#structure">Предприятия</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div class="footer-copy">
+        <p>Все права защищены Холдингом «Vinimpex».</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Persistent SVG Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Наверх">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
